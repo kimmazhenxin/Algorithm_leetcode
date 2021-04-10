@@ -28,6 +28,13 @@ package com.algorithm.string;
 public class IpAddressValidation {
 
 	public static void main(String[] args) {
+		System.out.println(check("123.9.2.0"));
+		System.out.println(check(" 233 . 33. 13 . 33 "));
+		System.out.println(check(" 233. 22 1. 233. 1"));
+		System.out.println(check(" 222. 319. 2. 4"));
+		System.out.println(check("2ba. 23. 34. 11"));
+		System.out.println(check("232. 232. 11"));
+		System.out.println(check("233. . 33.2"));
 
 	}
 
@@ -79,7 +86,7 @@ public class IpAddressValidation {
 		while (i < n) {
 			char c = segment.charAt(i);
 			// 后面居然又有非空格字符,也就是说数字之间不能有空格
-			if (i != ' ') {return false;}
+			if (c != ' ') {return false;}
 			i++;
 		}
 		return true;
