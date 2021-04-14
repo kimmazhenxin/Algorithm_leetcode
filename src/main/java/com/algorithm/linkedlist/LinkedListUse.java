@@ -1,8 +1,9 @@
 package com.algorithm.linkedlist;
 
+
 /**
  * @Author: kim
- * @Description: 链表的使用,增删改查
+ * @Description: 单向链表的使用,增删改查
  * @Date: 10:06 2021/4/9
  * @Version: 1.0
  */
@@ -127,13 +128,44 @@ public class LinkedListUse {
         p.next = newNode;
     }
 
+    /**
+     * 删除给定节点之后的节点
+     * @param p
+     */
+    public void deleteNextNode(Node p) {
+        if (null == p || null == p.next) {
+            return;
+        }
+        p.next = p.next.next;
+    }
 
+    /**
+     * 删除给定的节点
+     * @param p
+     */
+    public void deleteThisNode(Node p) {
+        // 空链表或者p为空节点
+        if (null == p || head == null) {
+            return;
+        }
 
+        // p为头节点的特殊情况,此时就意味着要删除head头节点
+        if (p == head) {
+            head = head.next;
+        }
 
-
-    // 删除
-    public void delete() {
-
+        // 用prev来遍历链表,遍历找到p节点的前一个节点
+        Node prev = head;
+        // 当prev指向尾节点时或者找到了p节点,那么循环就结束了
+        while (prev.next != null && prev.next != p) {
+            prev = prev.next;
+        }
+        // 判断上述循环结束的具体条件,此时说明遍历到尾节点仍然没有发现P节点
+        if (prev.next == null) {
+            return;
+        }
+        // 找到了p节点,删除p节点
+        prev.next = prev.next.next;
     }
 }
 
@@ -153,5 +185,20 @@ class Node {
     public Node(int data, Node next) {
         this.data = data;
         this.next = next;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (null == obj) {return false;}
+        if (this == obj) {return true;}
+        if (obj instanceof Node) {
+            Node node = (Node)obj;
+            if (node.data == this.data) {
+                return node.next == this.next;
+            } else {
+                return false;
+            }
+        }
+        return false;
     }
 }
