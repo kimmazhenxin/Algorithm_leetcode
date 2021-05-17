@@ -13,12 +13,15 @@ package com.algorithm.string;
  * 输入: "the sky is blue"
  * 输出: "blue is sky the"
  *
+ * 解题思路:
+ *
+ *
  * @Author: kim
  * @Description: 翻转单词顺序
  * @Date: 9:08 2021/4/8
  * @Version: 1.0
  */
-public class ReverseWords_Offer58 {
+public class ReverseWords_Offer58I {
 
     public static void main(String[] args) {
         String str = " the sky  is  blue ";

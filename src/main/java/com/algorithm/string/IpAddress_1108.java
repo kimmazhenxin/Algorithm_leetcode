@@ -9,6 +9,9 @@ package com.algorithm.string;
  * 输入：address = "1.1.1.1"
  * 输出："1[.]1[.]1[.]1"
  *
+ * 解题思路:
+ *  简单字符串替换
+ *
  * @Author: kim
  * @Description:IP地址无效化
  * @Date: 9:01 2021/4/8

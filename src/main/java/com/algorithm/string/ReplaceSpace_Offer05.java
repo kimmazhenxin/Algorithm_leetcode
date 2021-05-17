@@ -10,6 +10,9 @@ package com.algorithm.string;
  * 限制：
  * 0 <= s 的长度 <= 10000
  *
+ * 解题思路:
+ *
+ *
  * @Author: kim
  * @Description: 替换空格
  * @Date: 15:22 2021/4/14

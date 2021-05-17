@@ -1,7 +1,7 @@
 package com.algorithm.string;
 
 /**
- * (拼多多面试题)
+ * (拼多多面试题) 纯编程题
  * 给定一个字符串表示的IP地址,比如 "123.92.2.34",判断其是否合法.合法的IP地址的规则如下:
  * a.除了空格、数字和 .之外,不得包含其他字符
  * b.IP地址由四个数字构成,由 . 分隔,每个 .隔开的数字大小在0~255之间
@@ -53,6 +53,29 @@ public class IpAddressValidation {
 			boolean vaild = checkSegment(ipSegments[i]);
 			if (!vaild) {return false;}
 		}
+		return true;
+	}
+
+	// 校验ip地址的合法化,没有使用split切割函数
+	public static boolean check2(String ip) {
+		if (null == ip) {return false;}
+		// segment个数
+		int count = 0;
+		for (int i = 0; i < ip.length(); i++) {
+			int j = i;
+			// 找到 . 的位置,count++记录segment个数
+			while (j < ip.length() && ip.charAt(j) !='.') {
+				j++;
+			}
+			count++;
+			String segment = ip.substring(i, j);
+			boolean valid = checkSegment(segment);
+			if (!valid) {return false;}
+			// i从下一个.之后重新判断
+			i = j;
+		}
+		// segment个数大于4说明不满足条件
+		if (count > 4) {return false;}
 		return true;
 	}
 

@@ -14,6 +14,10 @@ import java.util.Map;
  * 输出：[0,1]
  * 解释：因为 nums[0] + nums[1] == 9 ，返回 [0, 1] 。
  *
+ *
+ * 解题思路:
+ * 	两层for循环，或者Map解决，或排序+双指针
+ *
  * @Author: kim
  * @Description:两数之后
  * @Date: 8:57 2021/4/8

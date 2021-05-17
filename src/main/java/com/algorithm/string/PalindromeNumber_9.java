@@ -16,6 +16,9 @@ package com.algorithm.string;
  * 输出：false
  * 解释：从右向左读, 为 01 。因此它不是一个回文数。
  *
+ * 解题思路:
+ *
+ *
  * @Author: kim
  * @Description: 回文数
  * @Date: 2021/4/11 10:26

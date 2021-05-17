@@ -11,6 +11,9 @@ package com.algorithm.string;
  * 输入: "race a car"
  * 输出: false
  *
+ * 解题思路:
+ *
+ *
  * @Author: kim
  * @Description: 验证回文串
  * @Date: 2021/4/11 8:53
