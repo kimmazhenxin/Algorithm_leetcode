@@ -17,14 +17,30 @@ package com.algorithm.string;
  * 限制：
  * 1 <= k < s.length <= 10000
  *
+ * 解题思路:
+ *  遍历字符串
+ *
  * @Author: kim
- * @Description:
+ * @Description: 左旋转字符串
  * @Date: 11:12 2021/5/14
  * @Version: 1.0
  */
 public class ReverseLeftWords_Offer58II {
 
     public static void main(String[] args) {
+        String str = "abcdefg";
+        System.out.println(reverseLeftWords(str, 2));
+    }
 
+    public static String reverseLeftWords(String str, int n) {
+        // 方式1: str.substring(n) + str.substring(0, n);
+
+        // 方式2: 遍历
+        StringBuilder word = new StringBuilder();
+        for (int i = n; i < n + str.length(); i++) {
+            // 取余非常巧妙
+            word.append(str.charAt(i % str.length()));
+        }
+        return word.toString();
     }
 }
