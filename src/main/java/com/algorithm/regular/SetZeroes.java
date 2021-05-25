@@ -30,13 +30,61 @@ package com.algorithm.regular;
 public class SetZeroes {
 
 	public static void main(String[] args) {
+		// 4*3 矩阵
+		int[][] a = new int[4][];
+		a[0] = new int[]{1,2,3};
+		a[1] = new int[]{4,5,6};
+		a[2] = new int[]{7,8,9};
+		a[3] = new int[]{0,10,11};
+		System.out.println("a.length = " + a.length);
+		System.out.println("a[0].length = " + a[0].length);
+		System.out.println("a[1].length = " + a[1].length);
+		print(a);
 
+		// 设置0
+		setZeroes(a);
+		System.out.println("---------------------------");
+		print(a);
 	}
 
 
-
+	// m*n行矩阵
 	public static void setZeroes(int[][] matrix) {
+		int m = matrix.length;
+		int n = matrix[0].length;
 
+		// 记录哪一列哪一行有0要清空
+		boolean[] zeroRows = new boolean[m];
+		boolean[] zeroColumns = new boolean[n];
+
+		// 先遍历矩阵,找出元素为0的行与列
+		for (int i = 0; i < m; i++) {
+			for (int j = 0; j < n; j++) {
+				if (matrix[i][j] == 0) {
+					zeroRows[i] = true;
+					zeroColumns[j] = true;
+				}
+			}
+		}
+
+		// 再次遍历矩阵,根据之前的位置设置相应位置元素为0
+		for (int i = 0; i < m; i++) {
+			for (int j = 0; j < n; j++) {
+				if (zeroRows[i] || zeroColumns[j]) {
+					// 对应行列元素设0
+					matrix[i][j] = 0;
+				}
+			}
+		}
+	}
+
+
+	public static void print(int[][] a) {
+		for (int i = 0; i < a.length; i++) {
+			for (int j = 0; j < a[i].length; j++) {
+				System.out.println(i + ":" + j +" = " + a[i][j]);
+			}
+		}
 
 	}
 }
