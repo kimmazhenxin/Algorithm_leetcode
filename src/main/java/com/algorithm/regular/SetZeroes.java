@@ -19,7 +19,7 @@ package com.algorithm.regular;
  * ]
  *
  * 解题思路:
- *
+ * 用两个标记变量分别记录每一行和每一列是否有零出现
  *
  *
  * @Author: kim
