@@ -30,7 +30,13 @@ package com.algorithm.regular;
 public class SetZeroes {
 
 	public static void main(String[] args) {
+		int[][] a = new int[4][];
+		a[0] = new int[]{1,2,3};
+		a[1] = new int[]{0,5,6};
+		a[2] = new int[]{7,0,9};
+		a[3] = new int[]{9,9,9};
 
+		setZeroes2(a);
 	}
 
 
@@ -38,5 +44,31 @@ public class SetZeroes {
 	public static void setZeroes(int[][] matrix) {
 
 
+	}
+
+	// m*n矩阵
+	public static void setZeroes2(int[][] matrix) {
+		int m = matrix.length;
+		int n = matrix[0].length;
+		boolean[] zeroRow = new boolean[m];
+		boolean[] zeroColumn = new boolean[n];
+		for (int i = 0; i < m; i++) {
+			for (int j = 0; j < n; j++) {
+				if (matrix[i][j] == 0) {
+					zeroRow[i] = true;
+					zeroColumn[j] = true;
+				}
+			}
+		}
+
+		for (int i = 0; i < m; i++) {
+			for (int j = 0; j < n; j++) {
+				if (zeroRow[i] || zeroColumn[j]) {
+					matrix[i][j] = 0;
+				}
+				System.out.print(matrix[i][j] + " ");
+			}
+			System.out.println();
+		}
 	}
 }

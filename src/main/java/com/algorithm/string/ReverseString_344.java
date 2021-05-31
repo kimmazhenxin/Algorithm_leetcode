@@ -23,7 +23,6 @@ public class ReverseString_344 {
 	public static void main(String[] args) {
 		String s = "hello";
 		System.out.println(reverseString(s.toCharArray()));
-
 	}
 
 
@@ -40,6 +39,18 @@ public class ReverseString_344 {
 			char c = str[left];
 			str[left] = str[right];
 			str[right] = c;
+		}
+		return String.valueOf(str);
+	}
+
+
+	public static String reverseString2(char[] str) {
+		int n = str.length;
+		// 注意这里的边界条件, n/2
+		for (int i = 0; i < n/2; i++) {
+			char tmp = str[i];
+			str[i] = str[n-1-i];
+			str[n-1-i] = tmp;
 		}
 		return String.valueOf(str);
 	}

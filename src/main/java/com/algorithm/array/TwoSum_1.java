@@ -28,7 +28,7 @@ public class TwoSum_1 {
 	public static void main(String[] args) {
 		//数组无序
 		int[] array1 = {3, 7, 5, 9};
-		int[] result = twoSum(array1, 8);
+		int[] result = twoSum2(array1, 8);
 		for (int i : result) {
 			System.out.println(i);
 		}
@@ -41,8 +41,22 @@ public class TwoSum_1 {
 		}
 	}
 
-	//哈希法(数组无序)
 	public static int[] twoSum(int[] array, int target) {
+		// 先确定A
+		for (int i = 0; i < array.length; i++) {
+			// 再确定B,这里B的下标总是比A的下标答，避免类似(1,5)和(5,1)这样的重复组合
+			for (int j = i+1; j < array.length;  j++) {
+				if (array[i] + array[j] == target) {
+					// 只要有一个满足,就返回
+					return new int[]{i, j};
+				}
+			}
+		}
+		return null;
+	}
+
+	//哈希法(数组无序)
+	public static int[] twoSum2(int[] array, int target) {
 		Map<Integer, Integer> map = new HashMap<>();
 		for (int i = 0; i < array.length; i++) {
 			//判断Map中是否有target - x,有的话就返回对应的下标

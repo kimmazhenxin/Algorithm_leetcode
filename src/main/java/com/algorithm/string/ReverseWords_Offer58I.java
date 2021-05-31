@@ -14,6 +14,8 @@ package com.algorithm.string;
  * 输出: "blue is sky the"
  *
  * 解题思路:
+ *  1. 先split -> 再反转单词 (空间复杂度O(n))
+ *  2. 两次反转 -> 空间复杂度O(1) 原地反转
  *
  *
  * @Author: kim
@@ -24,12 +26,59 @@ package com.algorithm.string;
 public class ReverseWords_Offer58I {
 
     public static void main(String[] args) {
-        String str = " the sky  is  blue ";
-        System.out.println(reverseWords(str));
+        String str = "  the sky  is   blue  ";
+        //System.out.println(reverseWords(str));
         System.out.println(reverseWords2(str));
     }
 
-    // 分隔
+    /**
+     * 重点！！ 原地删除字符串的前置、后置空格,以及内部的多余空格,只保留单词之间一个空格
+     * @param str
+     * @return 返回新字符串的长度
+     */
+    public static int trim(char[] str) {
+        int i = 0;
+        int n = str.length;
+        // 新数组的长度
+        int k = 0;
+        // 先找到前面第一个非空格字符
+        while (i < n && str[i] == ' ') {
+            i++;
+        }
+        while (i < n) {
+            // 关键点: 删除内部多余的空格和末尾的空格
+            if (str[i] == ' ') {
+                if (i+1 < n && str[i+1] != ' ') {
+                    str[k] = ' ';
+                    k++;
+                }
+            } else {
+                // 非空格就正常赋值,将其向前移
+                str[k] = str[i];
+                k++;
+            }
+            i++;
+        }
+        return k;
+    }
+
+    /**
+     * 重点,要熟练！！返回[p,r]之间的字符串，注意这⾥是闭区间，当然，前开后闭区间也可以，但代码中i<=mid应该改为i<mid
+     * @param str
+     * @param p 前索引
+     * @param r 后索引
+     */
+    public static void reverse(char[] str, int p, int r) {
+        int mid = (p + r + 1)/2;
+        for (int i = p; i < mid; i++) {
+            char tmp = str[i];
+            str[i] = str[r-(i-p)];
+            str[r-(i-p)] = tmp;
+        }
+    }
+
+
+    // 解法1: 分隔
     public static String reverseWords(String s) {
         // 删除收尾空格,按照空格分隔字符串,如果单词之间有x个空格,那么按照空格切割,那么单词之间会有x-1个空字符串
         String[] strs = s.trim().split(" ");
@@ -46,9 +95,35 @@ public class ReverseWords_Offer58I {
         return result.toString().trim();
     }
 
+    
+    // 解法2:两次反转(最佳解法)
+    public static String reverseWords2(String s) {
+        char[] str = s.toCharArray();
+        // 去除字符串中的前后、中间多余空格,只保留中间的一个
+        int n = trim(str);
+        // 说明该字符全是空格
+        if (0 == n) {return "";}
+        // 整个字符串先反转一次
+        reverse(str, 0, n-1);
+        int p = 0;
+        while (p < n) {
+            int r = p;
+            // 找到单词的前后位置
+            while (r < n && str[r] != ' ') {
+                r++;
+            }
+            // 反转每个单词
+            reverse(str, p, r-1);
+            // 下个单词的起始位置
+            p = r+1;
+        }
+        return String.valueOf(str, 0, n);
+    }
+
+
 
     // 双指针法
-    public static String reverseWords2(String s) {
+    public static String reverseWords3(String s) {
         String str = s.trim();
         StringBuilder result = new StringBuilder();
         // 从字符串尾部开始遍历
@@ -67,6 +142,8 @@ public class ReverseWords_Offer58I {
         }
         return result.toString().trim();
     }
+
+
 
 
 }
