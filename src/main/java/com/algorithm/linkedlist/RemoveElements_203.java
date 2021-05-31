@@ -17,7 +17,7 @@ package com.algorithm.linkedlist;
  * @Date: 2021/5/31 21:29
  * @Version: 1.0
  */
-public class RemoveElements {
+public class RemoveElements_203 {
 
 	public static void main(String[] args) {
 
