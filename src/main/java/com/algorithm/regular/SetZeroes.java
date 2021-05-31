@@ -30,28 +30,31 @@ package com.algorithm.regular;
 public class SetZeroes {
 
 	public static void main(String[] args) {
+		// 4*3 矩阵
 		int[][] a = new int[4][];
 		a[0] = new int[]{1,2,3};
-		a[1] = new int[]{0,5,6};
-		a[2] = new int[]{7,0,9};
-		a[3] = new int[]{9,9,9};
+		a[1] = new int[]{4,5,6};
+		a[2] = new int[]{7,8,9};
+		a[3] = new int[]{0,10,11};
+		System.out.println("a.length = " + a.length);
+		System.out.println("a[0].length = " + a[0].length);
+		System.out.println("a[1].length = " + a[1].length);
 
-		setZeroes2(a);
+		// 设置0
+		setZeroes(a);
+		System.out.println("---------------------------");
 	}
 
-
-
-	public static void setZeroes(int[][] matrix) {
-
-
-	}
 
 	// m*n矩阵
-	public static void setZeroes2(int[][] matrix) {
+	public static void setZeroes(int[][] matrix) {
 		int m = matrix.length;
 		int n = matrix[0].length;
+		// 记录哪一列哪一行有0要清空
 		boolean[] zeroRow = new boolean[m];
 		boolean[] zeroColumn = new boolean[n];
+
+		// 先遍历矩阵,找出元素为0的行与列
 		for (int i = 0; i < m; i++) {
 			for (int j = 0; j < n; j++) {
 				if (matrix[i][j] == 0) {
@@ -60,7 +63,7 @@ public class SetZeroes {
 				}
 			}
 		}
-
+		// 再次遍历矩阵,根据之前的位置设置相应位置元素为0
 		for (int i = 0; i < m; i++) {
 			for (int j = 0; j < n; j++) {
 				if (zeroRow[i] || zeroColumn[j]) {
