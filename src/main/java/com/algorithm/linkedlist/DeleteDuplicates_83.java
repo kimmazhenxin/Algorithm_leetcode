@@ -17,7 +17,7 @@ package com.algorithm.linkedlist;
  * @Date: 11:27 2021/6/1
  * @Version: 1.0
  */
-public class DeleteDuplicates {
+public class DeleteDuplicates_83 {
     public static void main(String[] args) {
 
     }

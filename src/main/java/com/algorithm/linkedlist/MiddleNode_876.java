@@ -10,7 +10,8 @@ package com.algorithm.linkedlist;
  * 由于该列表有两个中间结点，值分别为 3 和 4，我们返回第二个结点。
  *
  * 解题思路:
- *  1.
+ *  1. 两次遍历链表
+ *  2. 快慢指针
  *
  *
  * @Author: kim
@@ -34,11 +35,25 @@ public class MiddleNode_876 {
         n4.setNextNode(n5);
         n5.setNextNode(n6);
 
-        System.out.println(middleNode(n1).data);
+        System.out.println(middleNode1(n1).data);
+    }
+
+    // 解法2
+    public static ListNode middleNode2(ListNode head) {
+        ListNode fast = head;
+        ListNode slow = head;
+        while (fast != null && fast.nextNode != null) {
+            slow = slow.nextNode;
+            fast = fast.nextNode.nextNode;
+        }
+        return slow;
     }
 
 
-    public static ListNode middleNode(ListNode head) {
+
+
+    // 解法1
+    public static ListNode middleNode1(ListNode head) {
 
         ListNode p = head;
         // 链表节点个数
