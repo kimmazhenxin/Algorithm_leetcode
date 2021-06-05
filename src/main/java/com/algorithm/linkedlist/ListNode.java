@@ -35,6 +35,21 @@ public class ListNode {
             this.data = data;
         }
 
+
+        // 遍历输出链表元素
+        public static void printAll(ListNode head) {
+            ListNode p = head;
+            if (null == head) {
+                return;
+            }
+            while (p != null) {
+                System.out.print(p.getData() + " ");
+                p = p.nextNode;
+            }
+            System.out.println();
+        }
+
+
     @Override
     public String toString() {
         return "ListNode{" +

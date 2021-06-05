@@ -16,6 +16,10 @@ public class LinkedListStack {
 
         public ListNode next;
 
+        public ListNode() {
+
+        }
+
         public ListNode(int data, ListNode next) {
             this.data = data;
             this.next = next;
