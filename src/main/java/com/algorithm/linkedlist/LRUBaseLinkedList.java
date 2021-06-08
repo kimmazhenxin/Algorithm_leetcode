@@ -24,7 +24,7 @@ public class LRUBaseLinkedList<T> {
     private final static Integer DEAFULT_CAPACITY = 10;
 
     /**
-     * 链表的头结点
+     * 链表的头结点,这里引入一个虚拟节点,不存储任何的数据
      */
     private Node<T> head;
 
@@ -108,7 +108,7 @@ public class LRUBaseLinkedList<T> {
      */
     public void deleteNodeEnd() {
         Node p = head;
-        // 空链表
+        // 空链表直接返回
         if (p.getNext() == null) {
             return;
         }
@@ -132,25 +132,25 @@ public class LRUBaseLinkedList<T> {
      * @param data
      */
     public void insertElementAtBegin(T data){
+        Node next = head.getNext();
+
         Node<T> node = new Node<>(data);
-        node.setNext(head);
+
+        node.setNext(next);
+
+        head.setNext(node);
+
         // 链表长度加1
         length++;
-        // 头结点修改
-        head = node;
     }
 
     /**
      * 遍历输出元素
      */
     public void printAll() {
-        Node<T> node = head;
-        // 只有一个节点情况
-        if (node.next == null) {
-            System.out.print(node.getElement() + ",");
-        }
+        Node<T> node = head.getNext();
 
-        while (node.next != null) {
+        while (node != null) {
             System.out.print(node.getElement() + ",");
             node = node.getNext();
         }
@@ -163,7 +163,7 @@ public class LRUBaseLinkedList<T> {
 
         private T element;
 
-        private Node<T> next;
+        private Node next;
 
         public Node(){
             this.next = null;
@@ -186,11 +186,11 @@ public class LRUBaseLinkedList<T> {
             this.element = element;
         }
 
-        public Node<T> getNext() {
+        public Node getNext() {
             return next;
         }
 
-        public void setNext(Node<T> next) {
+        public void setNext(Node next) {
             this.next = next;
         }
 

@@ -55,9 +55,9 @@ public class RemoveDuplicates_26 {
 			} else {
 				if (q - p > 1) {
 					array[p+1] = array[q];
-					p++;
-					q++;
 				}
+				p++;
+				q++;
 			}
 		}
 		return p + 1;

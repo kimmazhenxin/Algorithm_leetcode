@@ -38,11 +38,22 @@ public class MiddleNode_876 {
         System.out.println(middleNode1(n1).data);
     }
 
-    // 解法2
+    // 解法2:偶数时返回第二个节点
     public static ListNode middleNode2(ListNode head) {
         ListNode fast = head;
         ListNode slow = head;
         while (fast != null && fast.nextNode != null) {
+            slow = slow.nextNode;
+            fast = fast.nextNode.nextNode;
+        }
+        return slow;
+    }
+
+    // 偶数时返回第一个节点
+    public static ListNode middleNode3(ListNode head) {
+        ListNode fast = head;
+        ListNode slow = head;
+        while (fast.nextNode != null && fast.nextNode.nextNode != null) {
             slow = slow.nextNode;
             fast = fast.nextNode.nextNode;
         }
