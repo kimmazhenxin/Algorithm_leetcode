@@ -76,7 +76,7 @@ public class AddTwoNumbers_2 {
 			// 插入链表尾部
 			tail.nextNode = newNode;
 			// 更改tail指针
-			tail = tail.nextNode;
+			tail = newNode;
 		}
 
 		// 注意特殊情况,就是所有遍历完了以后,可能会产生新的一位进位1,比如 9993 + 18 = 10011,这里就新产生了一个进位1
