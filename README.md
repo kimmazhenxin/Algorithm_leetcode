@@ -1,6 +1,6 @@
 
 ## leetcode刷题 leetcode库
-##. 纯编程题
+## 纯编程题  
 [1.两数之和](https://leetcode-cn.com/problems/two-sum/)  
 [1108.IP地址无效化](https://leetcode-cn.com/problems/defanging-an-ip-address/)  
 [344.反转字符串](https://leetcode-cn.com/problems/reverse-string/)  
@@ -14,7 +14,7 @@
 [剑指 Offer 67.把字符串转换成整数 (经典atoi()，注意范围越界处理)](https://leetcode-cn.com/problems/ba-zi-fu-chuan-zhuan-huan-cheng-zheng-shu-lcof/)
 
 
-##. 规律题
+## 规律题  
 [面试题 01.08.零矩阵](https://leetcode-cn.com/problems/zero-matrix-lcci/)  
 [剑指 Offer 61.扑克牌中的顺子](https://leetcode-cn.com/problems/bu-ke-pai-zhong-de-shun-zi-lcof/)  
 [面试题 16.11.跳水板](https://leetcode-cn.com/problems/diving-board-lcci/)  
@@ -27,5 +27,6 @@
 [240.搜索二维矩阵 II](https://leetcode-cn.com/problems/search-a-2d-matrix-ii/)  
 
 
-##. 链表  
+## 链表  
 [203.移除链表元素](https://leetcode-cn.com/problems/remove-linked-list-elements/)  
+ 
