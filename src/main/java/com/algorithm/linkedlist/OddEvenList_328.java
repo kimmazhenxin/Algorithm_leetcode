@@ -56,10 +56,10 @@ public class OddEvenList_328 {
         }
 
         ListNode p = head;
-        // 奇链表
+        // 奇链表,申请虚拟头节点
         ListNode newHead1 = new ListNode();
         ListNode tail1 = newHead1;
-        // 偶链表
+        // 偶链表,申请虚拟头节点
         ListNode newHead2 = new ListNode();
         ListNode tail2 = newHead2;
 
