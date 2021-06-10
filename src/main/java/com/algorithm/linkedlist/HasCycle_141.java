@@ -24,6 +24,7 @@ package com.algorithm.linkedlist;
  *
  *
  * 解题思路:
+ * 1.(双指针),指定快慢指针fast、slow,fast走2步,slow走1步。如果链表是有环的,那么最终fast和slow会进入环,而且最终slow == fast,即slow肯定追上fast
  *
  *
  * @Author: kim
@@ -34,12 +35,44 @@ package com.algorithm.linkedlist;
 public class HasCycle_141 {
 
 	public static void main(String[] args) {
+		ListNode n1 = new ListNode(null,2);
+		ListNode n2= new ListNode(null,1);
+		ListNode n3 = new ListNode(null,3);
+		ListNode n4 = new ListNode(null,5);
+		ListNode n5 = new ListNode(null,6);
+		ListNode n6 = new ListNode(null,4);
+		ListNode n7 = new ListNode(null,7);
 
+		n1.setNextNode(n2);
+		n2.setNextNode(n3);
+		n3.setNextNode(n4);
+		n4.setNextNode(n5);
+		n5.setNextNode(n6);
+		n6.setNextNode(n7);
+		// 尾节点指向n4
+		n7.setNextNode(n4);
+
+
+		System.out.println(hasCycle(n1));
 	}
 
 
 	public static boolean hasCycle(ListNode head) {
+		ListNode slow = head;
+		// 这里是为了防止刚开始的时候fast == slow 推出循环,所以设置为下一个节点,效果一样的
+		ListNode fast = head.nextNode;
 
+		// 注意循环结束条件
+		// fast == null 在链表个数为偶数时遍历结束条件
+		// fast.nextNode == null 在链表个数为奇数时遍历结束条件
+		while (fast != null && fast.nextNode != null && slow != fast) {
+			fast = fast.nextNode.nextNode;
+			slow = slow.nextNode;
+		}
+		// 这时候说明是有环的
+		if (slow == fast) {
+			return true;
+		}
 		return false;
 	}
 }
