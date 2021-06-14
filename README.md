@@ -45,4 +45,20 @@
 
 ## 链表  
 [203.移除链表元素](https://leetcode-cn.com/problems/remove-linked-list-elements/)  
- 
+[876.链表的中间结点](https://leetcode-cn.com/problems/middle-of-the-linked-list/)  
+[83.删除排序链表中的重复元素](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/)  
+[2.两数相加](https://leetcode-cn.com/problems/add-two-numbers/)  
+[剑指 Offer 25.合并两个排序的链表](https://leetcode-cn.com/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/)  
+[206.反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)  
+[234.回文链表](https://leetcode-cn.com/problems/palindrome-linked-list/)  
+[328.奇偶链表](https://leetcode-cn.com/problems/odd-even-linked-list/)  
+[25.K个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)  
+[剑指 Offer 22.链表中倒数第k个节点](https://leetcode-cn.com/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/)  
+[19.删除链表的倒数第 N 个结点](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/)  
+[160.相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/)  
+[141.环形链表](https://leetcode-cn.com/problems/linked-list-cycle/)   
+[369.给单链表加一](https://leetcode-cn.com/problems/plus-one-linked-list/)   
+
+
+## 栈  
+[剑指 Offer 09.用两个栈实现队列](https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/)   
