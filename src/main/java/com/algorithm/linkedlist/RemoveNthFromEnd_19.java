@@ -112,6 +112,8 @@ public class RemoveNthFromEnd_19 {
 			preslow = slow;
 			slow = slow.nextNode;
 		}
+
+		// 删除倒数第n个节点
 		// 说明删除的是头结点,也就是n等于链表的长度
 		if (preslow == null) {
 			head = head.nextNode;
