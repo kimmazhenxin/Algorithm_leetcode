@@ -44,5 +44,48 @@
 
 
 ## 链表  
-[203.移除链表元素](https://leetcode-cn.com/problems/remove-linked-list-elements/)   
- 
+[203.移除链表元素](https://leetcode-cn.com/problems/remove-linked-list-elements/)  
+[876.链表的中间结点](https://leetcode-cn.com/problems/middle-of-the-linked-list/)  
+[83.删除排序链表中的重复元素](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/)  
+[2.两数相加](https://leetcode-cn.com/problems/add-two-numbers/)  
+[剑指 Offer 25.合并两个排序的链表](https://leetcode-cn.com/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/)  
+[206.反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)  
+[234.回文链表](https://leetcode-cn.com/problems/palindrome-linked-list/)  
+[328.奇偶链表](https://leetcode-cn.com/problems/odd-even-linked-list/)  
+[25.K个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)  
+[剑指 Offer 22.链表中倒数第k个节点](https://leetcode-cn.com/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/)  
+[19.删除链表的倒数第 N 个结点](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/)  
+[160.相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/)  
+[141.环形链表](https://leetcode-cn.com/problems/linked-list-cycle/)   
+[369.给单链表加一](https://leetcode-cn.com/problems/plus-one-linked-list/)   
+
+
+## 栈  
+[剑指 Offer 09.用两个栈实现队列](https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/)    
+[225.用队列实现栈](https://leetcode-cn.com/problems/implement-stack-using-queues/)  
+[面试题 03.01.三合一](https://leetcode-cn.com/problems/three-in-one-lcci/)  
+[20.有效的括号](https://leetcode-cn.com/problems/valid-parentheses/)  
+[面试题 16.26.计算器](https://leetcode-cn.com/problems/calculator-lcci/)  
+[772.基本计算器 III](https://leetcode-cn.com/problems/basic-calculator-iii/)  
+[1047.删除字符串中的所有相邻重复项](https://leetcode-cn.com/problems/remove-all-adjacent-duplicates-in-string/)  
+[面试题 03.05.栈排序](https://leetcode-cn.com/problems/sort-of-stacks-lcci/)  
+[155.最小栈](https://leetcode-cn.com/problems/min-stack/)  
+[剑指 Offer 31.栈的压入、弹出序列](https://leetcode-cn.com/problems/zhan-de-ya-ru-dan-chu-xu-lie-lcof/)   
+
+## 以下选做  
+[739.每日温度](https://leetcode-cn.com/problems/daily-temperatures/)
+[42.接雨水](https://leetcode-cn.com/problems/trapping-rain-water/)
+[84.柱状图中最大的矩形](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/)
+[面试题 03.06.动物收容所](https://leetcode-cn.com/problems/animal-shelter-lcci/)
+[剑指 Offer 59 - II.队列的最大值](https://leetcode-cn.com/problems/dui-lie-de-zui-da-zhi-lcof/)  
+[剑指 Offer 59 - I.滑动窗口的最大值](https://leetcode-cn.com/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof/)  
+
+
+## 递归与分治  
+
+
+
+
+## 排序  
+
+
