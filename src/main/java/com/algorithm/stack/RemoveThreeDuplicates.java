@@ -3,7 +3,7 @@ package com.algorithm.stack;
 import java.util.Stack;
 
 /**
- * 删除连续重复字符(腾讯实习)
+ * 连连消:删除连续重复字符(腾讯实习)
  * 字符串删除掉连续的3个重复的字符。比如 "abbbc",返回 "ac"; "abbbaac",返回 "c"; "abbaaabcc",返回 "acc"
  *
  * 解题思路:
