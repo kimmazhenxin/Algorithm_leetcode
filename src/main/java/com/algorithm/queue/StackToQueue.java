@@ -1,4 +1,4 @@
-package com.algorithm.stack;
+package com.algorithm.queue;
 
 import java.util.Stack;
 

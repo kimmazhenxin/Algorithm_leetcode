@@ -89,7 +89,7 @@ public class Solution_16_26 {
             }
         }
 
-        // 上述整个表达式遍历结束后,开始取出ops中的运算符进行计算,直到ops为空即表达式计算完成
+        // 上述整个表达式遍历结束后,开始取出ops中剩余的运算符进行计算,直到ops为空即表达式计算完成
         while (!ops.isEmpty()) {
             Integer number2 = nums.pop();
             Integer number1 = nums.pop();
