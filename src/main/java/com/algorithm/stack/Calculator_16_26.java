@@ -3,7 +3,7 @@ package com.algorithm.stack;
 import java.util.Stack;
 
 /**
- * leetcode 面试题 16.26. 计算器
+ * leetcode 面试题 16.26. 计算器(不包括括号)
  * 给定一个包含正整数、加(+)、减(-)、乘(*)、除(/)的算数表达式(括号除外)，计算其结果。
  * 表达式仅包含非负整数，+， - ，*，/ 四种运算符和空格 。 整数除法仅保留整数部分。
  *
@@ -20,8 +20,8 @@ import java.util.Stack;
  * 2.
  *      1）数字：直接入栈
  *      2）运算符：
- *         运算符 c > ops栈顶的优先级时，直接入栈（比如 *、/ 大于 +、-）；
- *         运算符 c <= ops栈顶的优先级时，取出 nums栈的两个数字，结合该运算符c进行表达式的计算
+ *         栈为空 或者 运算符 c > ops栈顶的优先级时，直接入栈（比如 *、/ 大于 +、-）;
+ *         运算符 c <= ops栈顶的优先级时，取出 nums栈的两个数字，结合该运算符c进行表达式的计算;
  *
  *
  * @Author: kim
@@ -29,10 +29,10 @@ import java.util.Stack;
  * @Date: 9:04 2021/7/9
  * @Version: 1.0
  */
-public class Solution_16_26 {
+public class Calculator_16_26 {
 
     public static void main(String[] args) {
-        Solution_16_26 solution = new Solution_16_26();
+        Calculator_16_26 solution = new Calculator_16_26();
         String expression1 = " 3/2 ";
         String expression2 = " 3*5 - 6 + 4 *3 - 5 * 2 ";
         System.out.println(solution.calculate(expression1));
@@ -114,7 +114,7 @@ public class Solution_16_26 {
     }
 
     /**
-     * 判断运算符 op1的优先级是否大于等于op2
+     * 判断运算符 op1的优先级是否大于op2
      * *、/ 大于 +、-
      * @param op1 运算符1
      * @param op2 运算符2

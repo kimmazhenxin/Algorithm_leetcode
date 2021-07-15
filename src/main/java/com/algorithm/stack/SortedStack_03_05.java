@@ -32,7 +32,7 @@ public class SortedStack_03_05 {
 
     }
 
-    // 每次出栈要求元素是栈中最小的元素
+    // 每次出栈要求元素是栈中最小的元素,pop()时候就把最小元素删除掉了
     public void pop() {
         if (stack.isEmpty()) {
             return;
@@ -110,7 +110,7 @@ class SortedStack {
         tmpStack = new Stack<>();
     }
 
-    // 入栈时候进行排序,从栈底到栈顶一次从大到小
+    // 入栈时候进行排序,从栈底到栈顶依次从大到小,pop()时候就把最小元素删除掉了
     public void push(int value) {
         // 如果入栈元素大于栈元素,那么栈元素先入临时栈中
         while (!stack.isEmpty() && stack.peek() < value) {
