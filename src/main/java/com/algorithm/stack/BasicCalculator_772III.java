@@ -61,7 +61,7 @@ public class BasicCalculator_772III {
                 i++;
             } else if (c == ')') { // 右括号要计算表达式直到遇到左括号 '('为止
                 while (!ops.isEmpty() && ops.peek() != '(') {
-                    fetchAndCall(data, ops);
+                    fetchAndCal(data, ops);
                 }
                 ops.pop();  // 弹出左括号 '('
                 i++;
@@ -70,27 +70,29 @@ public class BasicCalculator_772III {
                     ops.push(c);
                 } else {
                     while (!ops.isEmpty() && !prior(c, ops.peek())) {
-                        fetchAndCall(data, ops);
+                        fetchAndCal(data, ops);
                     }
+                    // 计算后再将c压栈
                     ops.push(c);
                 }
                 i++;
             }
         }
 
-        // 循环结束之后,计算运算符表达式
+        // 上述整个表达式遍历结束后,开始取出ops中剩余的运算符进行计算,直到ops为空即表达式计算完成
         while (!ops.isEmpty()) {
-            fetchAndCall(data, ops);
+            fetchAndCal(data, ops);
         }
         return data.pop();
     }
 
-    // 遇到右括号 )时候开始计算,直到遇到左括号 (为止
-    private void fetchAndCall(Stack<Integer> data, Stack<Character> ops) {
+    // 表达式计算
+    private void fetchAndCal(Stack<Integer> data, Stack<Character> ops) {
         Integer number2 = data.pop();
         Integer number1 = data.pop();
         char op = ops.pop();
         int reslult = cal(op, number1, number2);
+        //入栈
         data.push(reslult);
     }
 
@@ -129,14 +131,17 @@ public class BasicCalculator_772III {
 
     // 判断字符是不是数字
     public boolean isDigit(char c) {
-        return (c >= '0' || c <= '9');
+        return (c >= '0' && c <= '9');
     }
 
 
     public static void main(String[] args) {
         BasicCalculator_772III basicCalcu = new BasicCalculator_772III();
-        String exrpess = "";
-        int result = basicCalcu.calculate(exrpess);
-        System.out.println(exrpess + " = " + result);
+        String exrpess1 = "6-4/2";
+        String exrpess2 = "2*(5+5*2)/3+(6/2+8)";
+        int result1 = basicCalcu.calculate(exrpess1);
+        int result2 = basicCalcu.calculate(exrpess2);
+        System.out.println(exrpess1 + " = " + result1);
+        System.out.println(exrpess2 + " = " + result2);
     }
 }
