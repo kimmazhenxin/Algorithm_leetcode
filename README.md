@@ -82,10 +82,40 @@
 
 
 ## 递归与分治  
-
-
-
+[剑指 Offer 10-I.斐波那契数列](https://leetcode-cn.com/problems/fei-bo-na-qi-shu-lie-lcof/)  
+[剑指 Offer 10-II.青蛙跳台阶问题](https://leetcode-cn.com/problems/qing-wa-tiao-tai-jie-wen-ti-lcof/)  
+[面试题 08.01.三步问题](https://leetcode-cn.com/problems/three-steps-problem-lcci/)  
+[剑指 Offer 06.从尾到头打印链表](https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/)  
+[剑指 Offer 24.反转链表](https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/)  
+[剑指 Offer 16.数值的整数次方](https://leetcode-cn.com/problems/shu-zhi-de-zheng-shu-ci-fang-lcof/)  
+[面试题 08.05.递归乘法](https://leetcode-cn.com/problems/recursive-mulitply-lcci/)  
+  
+  
 
 ## 排序  
+[面试题 10.01.合并排序的数组](https://leetcode-cn.com/problems/sorted-merge-lcci/)  
+[21.合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)  
+[242.有效的字母异位词](https://leetcode-cn.com/problems/valid-anagram/)  
+[1502.判断能否形成等差数列](https://leetcode-cn.com/problems/can-make-arithmetic-progression-from-sequence/)  
+[252.会议室](https://leetcode-cn.com/problems/meeting-rooms/)  
+[56.合并区间](https://leetcode-cn.com/problems/merge-intervals/)  
+[剑指 Offer 21.调整数组顺序使奇数位于偶数前面](https://leetcode-cn.com/problems/diao-zheng-shu-zu-shun-xu-shi-qi-shu-wei-yu-ou-shu-qian-mian-lcof/)  
+[75.颜色分类](https://leetcode-cn.com/problems/sort-colors/)  
+[147.对链表进行插入排序](https://leetcode-cn.com/problems/insertion-sort-list/)  
+[148.排序链表(链表上的归并排序)](https://leetcode-cn.com/problems/sort-list/)  
+[215.数组中的第K个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)  
+[面试题 17.14.最小K个数](https://leetcode-cn.com/problems/smallest-k-lcci/)  
+[剑指 Offer 51.数组中的逆序对](https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/)  
+
+
+
+## 二分查找  
+
+
+
+## 哈希表  
+
+  
+
 
 
