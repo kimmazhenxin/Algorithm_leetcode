@@ -121,7 +121,5 @@ public class CatchRainWater_42 {
 
         System.out.println("height1接雨量: " + rain.trap1(height1));
         System.out.println("height2接雨量: " + rain.trap1(height2));
-
-
     }
 }
