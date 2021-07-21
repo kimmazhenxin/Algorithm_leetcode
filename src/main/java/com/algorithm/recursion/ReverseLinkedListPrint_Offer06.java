@@ -20,7 +20,7 @@ import java.util.List;
  * @Date: 10:13 2021/7/20
  * @Version: 1.0
  */
-public class ReverseLinkedListPrint_offer06 {
+public class ReverseLinkedListPrint_Offer06 {
 
 
     public int[] reversePrint(ListNode head) {
@@ -44,12 +44,12 @@ public class ReverseLinkedListPrint_offer06 {
         }
         // 递推公式,相当于先反转打印 head.next链表
         reverseTravel(head.nextNode, reslut);
-        // 将头结点添加到最后
+        // 将头结点添加到最后(后置逻辑)
         reslut.add(head.data);
     }
 
     public static void main(String[] args) {
-        ReverseLinkedListPrint_offer06 p = new ReverseLinkedListPrint_offer06();
+        ReverseLinkedListPrint_Offer06 p = new ReverseLinkedListPrint_Offer06();
 
         ListNode n1 = new ListNode(null,2);
         ListNode n2= new ListNode(null,1);
