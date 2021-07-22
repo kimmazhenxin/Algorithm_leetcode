@@ -24,6 +24,8 @@ public class Fib_Offer10I {
 
     /**
      * 简单版，但是存在重复计算问题
+     * 时间复杂度: O(2^n)
+     * 空间复杂度: O(n)
      * @param n
      * @return
      */
@@ -39,6 +41,8 @@ public class Fib_Offer10I {
 
     /**
      * 使用备忘录,解决重复计算问题
+     * 时间复杂度: O(n)
+     * 空间复杂度: O(n)
      * @param n
      * @return
      */

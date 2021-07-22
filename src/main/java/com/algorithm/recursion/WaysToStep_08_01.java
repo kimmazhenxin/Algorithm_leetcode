@@ -9,6 +9,10 @@ import java.util.Map;
  * 结果可能很大，你需要对结果模1000000007
  *
  *
+ * 解题思路:
+ * 1. 递归
+ * 2. 动态规划(迭代)
+ *
  * @Author: kim
  * @Description: 面试题 08.01. 三步问题
  * @Date: 15:24 2021/7/20
@@ -21,6 +25,7 @@ public class WaysToStep_08_01 {
     // 存储n和对应的计算结果 f(n)
     private Map<Integer, Integer> map = new HashMap<>();
 
+    // 递归
     public int waysToStep(int n) {
         if (n == 1) {
             return 1;
@@ -37,6 +42,35 @@ public class WaysToStep_08_01 {
         int ways = (waysToStep(n-1) + waysToStep(n-2) + waysToStep(n-3)) % mod;
         map.put(n, ways);
         return ways;
+    }
+
+
+    // 迭代
+    // 这种解法实际就是用了每n个台阶的解法实际是前面三个台阶的解法之和。
+    public int waysToStep2(int n) {
+        if (n == 1) {
+            return 1;
+        }
+        if (n == 2) {
+            return 2;
+        }
+        if (n == 3) {
+            return 4;
+        }
+
+        int a = 1;
+        int b = 1;
+        int c = 1;
+        int d = 0;
+
+        for (int i = 4; i <= n; i++) {
+            d = ((c+b)%mod + a)%mod; // 每次得到一个结果
+            // 将之前的结果依次往后赋值
+            a = b;
+            b = c;
+            c = d;
+        }
+        return d;
     }
 
 
