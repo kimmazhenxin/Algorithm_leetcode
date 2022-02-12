@@ -110,9 +110,27 @@
 
 
 ## 二分查找  
+[704. 二分查找（简单） 标准二分查找](https://leetcode-cn.com/problems/binary-search/)  
+[374. 猜数字大小](https://leetcode-cn.com/problems/guess-number-higher-or-lower/)  
+[744. 寻找比目标字母大的最小字母](https://leetcode-cn.com/problems/find-smallest-letter-greater-than-target/)  
+[35. 搜索插入位置（简单）](https://leetcode-cn.com/problems/search-insert-position/)  
+[34. 在排序数组中查找元素的第一个和最后一个位置](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/)  
+[面试题 10.05. 稀疏数组搜索](https://leetcode-cn.com/problems/sparse-array-search-lcci/)  
+[33. 搜索旋转排序数组 无重复数据](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)  
+[81. 搜索旋转排序数组 有重复数据](https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii/)  
+[153. 寻找旋转排序数组中的最小值 无重复数据](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/)  
+[154. 寻找旋转排序数组中的最小值 II 有重复数据](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/)  
+[852. 山脉数组的峰顶索引 峰值二分](https://leetcode-cn.com/problems/peak-index-in-a-mountain-array/)  
+[162. 寻找峰值 峰值二分](https://leetcode-cn.com/problems/find-peak-element/)  
+[367. 有效的完全平方数 二分答案](https://leetcode-cn.com/problems/valid-perfect-square/)  
+[69. x 的平方根 二分答案](https://leetcode-cn.com/problems/sqrtx/)  
+[875. 爱吃香蕉的珂珂 二分答案](https://leetcode-cn.com/problems/koko-eating-bananas/)  
+[658. 找到 K 个最接近的元素](https://leetcode-cn.com/problems/find-k-closest-elements/)  
+[74. 搜索二维矩阵 二维转一维，二分查找](https://leetcode-cn.com/problems/search-a-2d-matrix/)  
 
-
-
+  
+  
+    
 ## 哈希表  
 
   
